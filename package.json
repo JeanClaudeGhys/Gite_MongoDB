@@ -1,0 +1,26 @@
+{
+  "name": "projet_scrum",
+  "version": "1.0.0",
+  "description": "Le gite du Moulin",
+  "main": "index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanClaudeGhys/Projet_SCRUM.git"
+  },
+  "author": "Jc Ghyselinck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeanClaudeGhys/Projet_SCRUM/issues"
+  },
+  "homepage": "https://github.com/JeanClaudeGhys/Projet_SCRUM#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,486 @@
+/*Jc Ghyselinck  */
+/*Le 03/10/2022*/
+/*Le Gîte du Moulin*/
+/*css attaché à index.html*/
+/*-----------------------------------*/
+@font-face {
+    font-family: Average;
+    src: url('./police/AverageSans-Regular.ttf');
+}
+
+*, body, html {
+    font-family: Average;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav { /*fixation du menu nav*/
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+}
+
+#principale { /*compensation due au menu nav*/
+    position: relative;
+    top: 154px;
+}
+
+.toppage { /*bouton top page*/
+    position: fixed;
+    opacity: 15%;
+    bottom: 30px;
+    right: 10px;
+    transform: scale(0.5) rotate(-90deg);
+    -webkit-transform: scale(0.5) rotate(-90deg);
+    -moz-transform: scale(0.5) rotate(-90deg);
+    -ms-transform: scale(0.5) rotate(-90deg);
+    -o-transform: scale(0.5) rotate(-90deg);
+    z-index: 1;
+}
+
+.toppage:hover {
+    opacity: 100%;
+}
+
+#main { /*menu-conteneur principal*/
+    display: flex;
+    flex-direction: column;
+}
+
+#main > div:nth-child(1) { /*menu-conteneur du logo*/
+    display: flex;
+    justify-content: center;
+    background-color: #93d393;
+    padding-top: 20px;
+}
+
+.boutonMenu { /*menu-div du lien bouton menu (corps du bouton)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px; 
+    width: 250px;
+    height: 50px;   
+}
+
+#main > div a { /*texte bouton*/
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration: underline;   
+}
+
+.boutonMenu:hover, #main > div a:hover {
+    color: rgb(134, 56, 92);
+    text-decoration: none;
+}
+
+
+#main > div:nth-child(2) { /*conteneur des boutons*/
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #93d393;
+    padding-bottom: 10px;
+}
+
+#grandPhoto {
+    position: relative;
+    background-color: #E3EBE3;
+}
+
+#photo {
+    width: 100%;
+    filter: contrast(110%);
+    -webkit-filter: contrast(110%);
+}
+
+#GrandTexte { /*Grand texte sur la photo*/
+    position: absolute;
+    font-size: 110px;
+    color: #E2FFE1;
+    top: 150px;
+    left: 80px;
+}
+
+#text1 { /*Premier paragrhaphe: description générale*/
+    font-size: 24px;
+    text-justify: justify;
+    padding: 44px 50px 50px 50px;
+    background-color: #E3EBE3;
+}
+
+#carrousel { /*Conteneur du carrousel*/
+    width: 100%;
+    height: 600px;
+    background-color: #A1ACA1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imageCar {
+    /*Imagesformatéesducarrousel*/height: 400px;
+    width: 600px;
+    border-radius: 0px 50px 50px 50px;
+    -webkit-border-radius: 0px 50px 50px 50px;
+    -moz-border-radius: 0px 50px 50px 50px;
+    -ms-border-radius: 0px 50px 50px 50px;
+    -o-border-radius: 0px 50px 50px 50px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#image_centre:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(6px);
+}
+
+.contImageCar { /*Conteneur des images du carrousel*/
+    position: relative;
+}
+
+#intitul { /*texte du dessus des photos*/
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+#leftBouton { /*Rotation du boutongauche*/
+    transform: rotate(180deg);
+}
+
+.direction { /*Coloration du fond bouton de direction carrousel*/
+    background-color: #A1ACA1;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+
+#reservCont { /*Conteneur bouton réserver*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#reservCar { /*Bouton réservation carrousel*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+    position: relative;
+    top: -200px; 
+}
+
+/*Aire du camping car---------------------------------------------*/
+#conteneurArticle1 { /*Conteneur article aire de camping car*/
+    
+    width: 100%;
+    height: 500px;
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#reservCc { /*Bouton réserver aire camping car*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+}
+
+#reservCc:hover {
+    background-color: white;
+} 
+
+#reservCc p { /*Texte du bouton réserver aire camping car*/ 
+    font-size: 25px;
+}
+
+#conteneurAside11, #conteneurAside12 { /*2 sous-conteneurs aire camping car*/
+    width: 45%;
+    height: 500px;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+#conteneurAside12 p { /*Texte Notre aire de camping car*/
+    font-size: 26px;
+} 
+
+#photo2 {
+    width: 600px;
+    height: 400px;
+    border-radius: 0px 50px 50px 50px;
+    -webkit-border-radius: 0px 50px 50px 50px;
+    -moz-border-radius: 0px 50px 50px 50px;
+    -ms-border-radius: 0px 50px 50px 50px;
+    -o-border-radius: 0px 50px 50px 50px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+/*Notre hostellerie---------------------------------------------*/
+
+#conteneurArticle2 { /*Conteneur article hostellerie*/
+    width: 100%;
+    height: 500px;
+    background-color: #CFD7CF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reservKg { /*Bouton réserver hostellerie*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+}
+
+#reservKg:hover {
+    background-color: white;
+}
+
+#reservKg p { /*Texte du bouton réserver hostellerie*/ 
+    font-size: 25px;
+}
+
+#conteneurAside21, #conteneurAside22 { /*2 sous-conteneurs hostellerie*/
+    width: 45%;
+    height: 500px;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conteneurAside21 p { /*Texte Notre aire de camping car*/
+    font-size: 26px;
+} 
+
+#photo3 {
+    width: 600px;
+    height: 400px;
+    border-radius: 0px 50px 50px 50px;
+    -webkit-border-radius: 0px 50px 50px 50px;
+    -moz-border-radius: 0px 50px 50px 50px;
+    -ms-border-radius: 0px 50px 50px 50px;
+    -o-border-radius: 0px 50px 50px 50px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+/*A découvrir---------------------------------------------*/
+
+#conteneurArticle3 { /*Conteneur article A découvrir*/
+    width: 100%;
+    height: 500px;
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conteneurAside31, #conteneurAside32 { /*2 sous-conteneurs A découvrir*/
+    width: 45%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteneurAside32 p { /*Texte A découvrir*/
+    font-size: 26px;
+} 
+
+#photo4 {
+    width: 600px;
+    height: 400px;
+    border-radius: 0px 50px 50px 50px;
+    -webkit-border-radius: 0px 50px 50px 50px;
+    -moz-border-radius: 0px 50px 50px 50px;
+    -ms-border-radius: 0px 50px 50px 50px;
+    -o-border-radius: 0px 50px 50px 50px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+/*Nos extérieurs---------------------------------------------*/
+
+#conteneurArticle4 { /*Conteneur article Nos extérieurs*/
+    width: 100%;
+    height: 500px;
+    background-color: #CFD7CF;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conteneurAside41, #conteneurAside42 { /*2 sous-conteneurs Nos extérieurs*/
+    width: 45%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conteneurAside41 p { /*Texte Nos extérieurs*/
+    font-size: 26px;
+}
+
+#photo5 {
+    width: 600px;
+    height: 400px;
+    border-radius: 0px 50px 50px 50px;
+    -webkit-border-radius: 0px 50px 50px 50px;
+    -moz-border-radius: 0px 50px 50px 50px;
+    -ms-border-radius: 0px 50px 50px 50px;
+    -o-border-radius: 0px 50px 50px 50px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+/*Le footer---------------------------------------------*/
+
+#contfoot { /*Conteneur footer*/
+    background-color: #769976;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+li a { /*Liens mentions*/
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover { /*Liens mentions*/
+    color: white;
+}
+
+.entet { /* Formatage texte Mentions*/
+    font-size: 26px;
+}
+
+#mentions { /*Conteneur mentions*/
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coord > li:first-of-type { /*logo adresse*/
+    list-style: url("/images_logos/panneau.png");
+}
+
+#coord > li:nth-of-type(2) { /*logo téléphone*/
+    list-style: url("/images_logos/tel.png");
+}
+
+#coordonnees { /*Coordonnées*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resosoc { /*Réseaux sociaux*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resosoc a img:hover {
+    filter: invert(50%);
+    -webkit-filter: invert(100%);
+}
+
+#partenaire { /*Vignette partenaire*/
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    font-size: 20px;
+    background-color: #769976;
+    padding-bottom: 40px;
+    padding-top: 30px;   
+}
+
+#part:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+/*--------Menus déroulant--------------*/
+
+#main > div:nth-child(2) > div:first-child { /*hébergement classique en pos relative*/
+    position: relative;
+}
+
+.menuderclass { /*sous-menu hébergement classique*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top:50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
+
+#main > div:nth-child(2) > div:nth-child(2) { /*hébergement insolite en pos relative*/
+    position: relative;
+}
+
+.menuderinsol { /*sous-menu hébergement insolite*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top:50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
+
+
+
+
+
+
+/*border: solid 3px red;*/
+
+
+

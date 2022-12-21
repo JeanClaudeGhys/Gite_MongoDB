@@ -1,0 +1,468 @@
+/*S Stievet  */
+/*Le 07/10/2022*/
+/*Le Gîte du Moulin*/
+/*css attaché à index.html*/
+/*-----------------------------------*/
+@font-face {
+    font-family: Average;
+    src: url('./police/AverageSans-Regular.ttf');
+}
+
+*,
+body,
+html {
+    font-family: Average;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /*fixation du menu nav*/
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+}
+
+#principale {
+    /*compensation due au menu nav*/
+    position: relative;
+    top: 154px;
+}
+
+.toppage {
+    /*bouton top page*/
+    position: fixed;
+    opacity: 15%;
+    bottom: 30px;
+    right: 10px;
+    transform: scale(0.5) rotate(-90deg);
+    -webkit-transform: scale(0.5) rotate(-90deg);
+    -moz-transform: scale(0.5) rotate(-90deg);
+    -ms-transform: scale(0.5) rotate(-90deg);
+    -o-transform: scale(0.5) rotate(-90deg);
+    z-index: 1;
+}
+
+.toppage:hover {
+    opacity: 100%;
+}
+
+#main {
+    /*menu-conteneur principal*/
+    display: flex;
+    flex-direction: column;
+}
+
+#main>div:nth-child(1) {
+    /*menu-conteneur du logo*/
+    display: flex;
+    justify-content: center;
+    background-color: #93d393;
+    padding-top: 20px;
+}
+
+.boutonMenu {
+    /*menu-div du lien bouton menu (corps du bouton)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    width: 250px;
+    height: 50px;
+}
+
+#main>div a {
+    /*texte bouton*/
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.boutonMenu:hover,
+#main>div a:hover {
+    color: rgb(134, 56, 92);
+    text-decoration: none;
+}
+
+
+#main>div:nth-child(2) {
+    /*conteneur des boutons*/
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #93d393;
+    padding-bottom: 10px;
+}
+
+#grandPhoto {
+    position: relative;
+    background-color: #E3EBE3;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input,
+select,
+textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+#container {
+    border: solid 3px #474544;
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+    top: 150px;
+}
+
+form {
+    padding: 37.5px;
+    margin: 50px 0;
+}
+
+h1 {
+    color: #474544;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+    fill: #474544;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+input[type='text'],
+[type='email'],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+    color: #474544;
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.subject {
+    width: 100%;
+}
+
+.telephone {
+    width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: #474544;
+}
+
+:-moz-placeholder {
+    color: #474544;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #474544;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #474544;
+}
+
+#form_button {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        margin: 20px auto;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .underline {
+        width: 68px;
+    }
+
+    #form_button {
+        padding: 15px 25px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .underline {
+        width: 53px;
+    }
+
+    input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+        font-size: 0.875em;
+    }
+}
+
+
+
+/*Le footer---------------------------------------------*/
+footer {
+    position: relative;
+    top: 150px;
+}
+#contfoot {
+    /*Conteneur footer*/
+    background-color: #769976;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+li a {
+    /*Liens mentions*/
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    /*Liens mentions*/
+    color: white;
+}
+
+.entet {
+    /* Formatage texte Mentions*/
+    font-size: 26px;
+}
+
+#mentions {
+    /*Conteneur mentions*/
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coord>li:first-of-type {
+    /*logo adresse*/
+    list-style: url("/images_logos/panneau.png");
+}
+
+#coord>li:nth-of-type(2) {
+    /*logo téléphone*/
+    list-style: url("/images_logos/tel.png");
+}
+
+#coordonnees {
+    /*Coordonnées*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resosoc {
+    /*Réseaux sociaux*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resosoc a img:hover {
+    filter: invert(50%);
+    -webkit-filter: invert(100%);
+}
+
+#partenaire {
+    /*Vignette partenaire*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+    font-size: 20px;
+    background-color: #769976;
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+#part:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+/*--------Menus déroulant--------------*/
+
+#main>div:nth-child(2)>div:first-child {
+    /*hébergement classique en pos relative*/
+    position: relative;
+}
+
+.menuderclass {
+    /*sous-menu hébergement classique*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
+
+#main>div:nth-child(2)>div:nth-child(2) {
+    /*hébergement insolite en pos relative*/
+    position: relative;
+}
+
+.menuderinsol {
+    /*sous-menu hébergement insolite*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
+
+
+
+
+
+
+/*border: solid 3px red;*/

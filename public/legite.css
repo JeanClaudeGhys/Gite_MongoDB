@@ -1,0 +1,392 @@
+/*Jc Ghyselinck  */
+/*Le 03/10/2022*/
+/*Le Gîte du Moulin*/
+/*css attaché à legite.html*/
+/*-----------------------------------*/
+@font-face {
+    font-family: Average;
+    src: url('police/AverageSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url('police/PlayfairDisplay.ttf');
+}
+
+*, body, html {
+    font-family: Average;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav { /*fixation du menu nav*/
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+}
+
+#principale { /*compensation au menu fixé*/
+    position: relative;
+    top: 159px;
+}
+
+#main { /*menu-conteneur principal*/
+    display: flex;
+    flex-direction: column;
+}
+
+.toppage { /*bouton top page*/
+    position: fixed;
+    opacity: 15%;
+    bottom: 30px;
+    right: 10px;
+    transform: scale(0.5) rotate(-90deg);
+    -webkit-transform: scale(0.5) rotate(-90deg);
+    -moz-transform: scale(0.5) rotate(-90deg);
+    -ms-transform: scale(0.5) rotate(-90deg);
+    -o-transform: scale(0.5) rotate(-90deg);
+    z-index: 1;
+}
+
+.toppage:hover {
+    opacity: 100%;
+}
+
+#main > div:nth-child(1) { /*menu-conteneur du logo*/
+    display: flex;
+    justify-content: center;
+    background-color: #93d393;
+    padding-top: 20px;
+}
+
+.boutonMenu { /*menu-div du lien bouton menu (corps du bouton)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px; 
+    width: 250px;
+    height: 50px;   
+}
+
+#main > div a { /*texte bouton*/
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration: underline;   
+}
+
+.boutonMenu:hover, #main > div a:hover {
+    color: rgb(134, 56, 92);
+    text-decoration: none;
+}
+
+#main > div:nth-child(2) { /*conteneur des boutons*/
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #93d393;
+    padding-bottom: 10px;
+}
+
+#conteneurphoto { /*conteneur photo + descriptif*/
+    width: 100%;
+    background-color: #A1ACA1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conteneurphoto > p:first-child { /*titre*/
+    font-size: 48px;
+    font-weight: bold;
+    margin: 30px;
+}
+
+#photo { /*photodugîte*/
+    width: 750px;
+    height: 500px;
+    border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -ms-border-radius: 40px 40px 40px 40px;
+    -o-border-radius: 40px 40px 40px 40px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#texte { /*texte decription*/
+    width: 75%;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+#tarification { /*conteneur tarification*/
+    background-color: #CCCCCC;
+    height: 230px;
+    position: relative;
+}
+
+#tarification > p:first-child { /*texte tarif*/
+    font-family: Playfair;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 200px;
+}
+
+#tarification > p:nth-child(2) { /*description tarification*/
+    font-size: 24px;
+    width: 75%;
+    position: absolute;
+    top: 80px;
+    left: 205px;
+    text-align: justify;
+}
+
+#tarification > p:nth-child(3) { /*prix*/
+    font-size: 24px;
+    font-weight: bold;
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    right: 168px; 
+}
+
+.reserv1 { /*conteneur du bouton reserver 1*/
+    display: flex;
+    justify-content: center;
+    background-color: #CCCCCC;
+} 
+
+.reserve { /*bouton réserver*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+}
+
+.reserve:hover {
+    background-color: white;
+}
+
+.reserve p { /*Texte du bouton réserver*/ 
+    font-size: 25px;
+}
+
+#option { /*conteneur option*/
+    background-color: #CCCCCC;
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+#option > p:first-child { /*texte options disponibles....réservation*/
+    font-family: Playfair;
+    font-size: 32px;
+    font-weight: bold;
+    width: 550px;
+    position: absolute;
+    top: 60px;
+    left: 205px;
+}
+
+#option > p:nth-child(2) { /*description option*/
+    font-size: 24px;
+    width: 75%;
+    position: absolute;
+    top: 110px;
+    left: 205px;
+    text-align: justify;
+}
+
+#option > p:nth-child(3) { /*prix option*/
+    font-size: 24px;
+    font-weight: bold;
+    width: 160px;
+    position: absolute;
+    top: 180px;
+    right: 155px; 
+}
+
+.option2 { /*conteneur option2*/
+    background-color: #CCCCCC;
+    width: 100%;
+    height: 147px;
+    position: relative;
+}
+
+.option2 > p:nth-child(1) { /*description option2*/
+    font-size: 24px;
+    width: 75%;
+    position: absolute;
+    top: 0px;
+    left: 205px;
+    text-align: justify;
+}
+
+.option2 > p:nth-child(2) { /*prix option2*/
+    font-size: 24px;
+    font-weight: bold;
+    width: 160px;
+    position: absolute;
+    top: 70px;
+    right: 142px;
+}
+
+#mm { /*marge sous le dernier réserver*/
+    width: 100%;
+    height: 50px;
+    background-color: #CCCCCC;
+}
+
+#infodiv { /*conteneur infos diverses*/
+    width: 100%;
+    position: relative;
+    height: 450px;
+    background-color: #CFD7CF;
+}
+
+#infodiv > p:nth-child(1) {
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 40px;
+    left: 205px
+}
+
+#infodiv > p:nth-child(2) {
+    font-size: 24px;
+    width: 75%;
+    position: absolute;
+    top: 110px;
+    left: 205px;
+    text-align: justify;
+}
+/*-----Footer----------------------------*/
+#contfoot { /*Conteneur footer*/
+    background-color: #769976;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+li a { /*Liens mentions*/
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover { /*Liens mentions*/
+    color: white;
+}
+
+.entet { /* Formatage texte Mentions*/
+    font-size: 26px;
+}
+
+#mentions { /*Conteneur mentions*/
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coord > li:first-of-type { /*logo adresse*/
+    list-style: url("/images_logos/panneau.png");
+}
+
+#coord > li:nth-of-type(2) { /*logo téléphone*/
+    list-style: url("/images_logos/tel.png");
+}
+
+#coordonnees { /*Coordonnées*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resosoc { /*Réseaux sociaux*/
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resosoc a img:hover {
+    filter: invert(50%);
+    -webkit-filter: invert(100%);
+}
+
+#partenaire { /*Vignette partenaire*/
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    font-size: 20px;
+    background-color: #769976;
+    padding-bottom: 40px;
+    padding-top: 30px;   
+}
+
+#part:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+/*-----fin du Footer------------------------*/
+
+
+ 
+/* border: solid 3px red; */
+
+/*--------Menus déroulants--------------*/
+
+#main > div:nth-child(2) > div:first-child { /*hébergement classique en pos relative*/
+    position: relative;
+}
+
+.menuderclass { /*sous-menu hébergement classique*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top:50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
+
+#main > div:nth-child(2) > div:nth-child(2) { /*hébergement insolite en pos relative*/
+    position: relative;
+}
+
+.menuderinsol { /*sous-menu hébergement insolite*/
+    width: 250px;
+    position: absolute;
+    border-radius: 20px 0 20px 0;
+    top:50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    visibility: hidden;
+    -webkit-border-radius: 20px 0 20px 0;
+    -moz-border-radius: 20px 0 20px 0;
+    -ms-border-radius: 20px 0 20px 0;
+    -o-border-radius: 20px 0 20px 0;
+}
